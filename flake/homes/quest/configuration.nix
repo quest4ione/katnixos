@@ -17,6 +17,8 @@
       self.homeModules.libre-office
       self.homeModules.vscode
       self.homeModules.git
+      self.homeModules.anki
+      self.homeModules.itch
     ];
   };
 }
