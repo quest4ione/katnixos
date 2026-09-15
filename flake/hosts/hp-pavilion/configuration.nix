@@ -23,6 +23,7 @@
       self.nixosModules.grub
       self.nixosModules.ly
       self.nixosModules.niri
+      self.nixosModules.kde
       self.nixosModules.noctalia-shell
 
       inputs.home-manager.nixosModules.home-manager {

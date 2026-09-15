@@ -1,5 +1,5 @@
 {
-  flake.homeModules = { pkgs, ... }: {
+  flake.homeModules.itch = { pkgs, ... }: {
     home.packages = [ pkgs.itch ];
   };
 }
