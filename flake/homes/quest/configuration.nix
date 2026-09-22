@@ -19,6 +19,7 @@
       self.homeModules.git
       self.homeModules.anki
       self.homeModules.itch
+      self.homeModules.kakoune
     ];
   };
 }
