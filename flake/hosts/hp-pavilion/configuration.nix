@@ -23,11 +23,6 @@
       self.nixosModules.bluez
       self.nixosModules.printing
 
-      # these need system installation to work i think
-      self.nixosModules.docker
-      self.nixosModules.flatpak
-      self.nixosModules.keyd
-
       # bootloaders, display managers, compositors, etc.
       self.nixosModules.grub
       self.nixosModules.ly
@@ -35,10 +30,16 @@
       self.nixosModules.kde
       self.nixosModules.noctalia-shell
 
-      # essential system programs
+      # other essential system programs
       self.nixosModules.bluetui
+      self.nixosModules.wiremix
       self.nixosModules.firefox
       self.nixosModules.helix
+
+      # these need system installation to work i think
+      self.nixosModules.docker
+      self.nixosModules.flatpak
+      self.nixosModules.keyd
       self.nixosModules.steam
     ];
   };
