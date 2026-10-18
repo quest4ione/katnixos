@@ -1,28 +1,17 @@
 { lib, inputs, ... }: {
   perSystem = { self', pkgs, ... }: {
     packages.niri-wrapped = inputs.wrapper-modules.wrappers.niri.wrap (
-      let
-          qs = lib.getExe pkgs.noctalia-qs;
-          noctalia-shell-qml = "${pkgs.noctalia-shell}/share/noctalia-shell/shell.qml";
-      in {
+      {
         inherit pkgs;
 
         settings = {
           include = ./config.kdl;
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
           spawn-at-startup = [
-            [qs "-p" noctalia-shell-qml]
+            (lib.getExe pkgs.noctalia)
           ];
           binds = {
-            "Mod+Space".spawn = [
-                qs
-                "-p"              
-                noctalia-shell-qml
-                "ipc"
-                "call"
-                "launcher"
-                "toggle"
-            ];
+            "Mod+Space".spawn-sh = "${lib.getExe pkgs.noctalia} msg panel-toggle launcher";
             "Mod+N".spawn = lib.getExe self'.packages.alacritty-wrapped;
             "Mod+B".spawn = lib.getExe pkgs.firefox;
           };

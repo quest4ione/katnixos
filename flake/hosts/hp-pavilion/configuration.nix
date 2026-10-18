@@ -28,7 +28,6 @@
       self.nixosModules.ly
       self.nixosModules.niri
       self.nixosModules.kde
-      self.nixosModules.noctalia-shell
 
       # other essential system programs
       self.nixosModules.bluetui
