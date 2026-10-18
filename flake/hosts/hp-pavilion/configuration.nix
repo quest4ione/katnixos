@@ -16,7 +16,8 @@
 
       self.nixosModules.network-manager
       self.nixosModules.pipewire
-      self.nixosModules.bluetooth
+      self.nixosModules.bluez
+      self.nixosModules.bluetui
       self.nixosModules.printing
       self.nixosModules.nix-ld
 
@@ -35,7 +36,7 @@
         };
       }
 
-      self.nixosModules.capsEsc
+      self.nixosModules.keyd
 
       self.nixosModules.docker
       self.nixosModules.flatpak
