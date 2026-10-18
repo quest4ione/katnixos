@@ -14,19 +14,34 @@
       self.nixosModules.common
       self.nixosModules.locale
 
+      # misc
+      self.nixosModules.nix-ld
+
+      # essential features
       self.nixosModules.network-manager
       self.nixosModules.pipewire
       self.nixosModules.bluez
-      self.nixosModules.bluetui
       self.nixosModules.printing
-      self.nixosModules.nix-ld
 
+      # these need system installation to work i think
+      self.nixosModules.docker
+      self.nixosModules.flatpak
+      self.nixosModules.keyd
+
+      # bootloaders, display managers, compositors, etc.
       self.nixosModules.grub
       self.nixosModules.ly
       self.nixosModules.niri
       self.nixosModules.kde
       self.nixosModules.noctalia-shell
 
+      # essential system programs
+      self.nixosModules.bluetui
+      self.nixosModules.firefox
+      self.nixosModules.helix
+      self.nixosModules.steam
+
+      # users
       inputs.home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -35,15 +50,6 @@
           quest = self.homeModules.questConfiguration;
         };
       }
-
-      self.nixosModules.keyd
-
-      self.nixosModules.docker
-      self.nixosModules.flatpak
-
-      self.nixosModules.firefox
-      self.nixosModules.steam
-      self.nixosModules.helix
     ];
   };
 }

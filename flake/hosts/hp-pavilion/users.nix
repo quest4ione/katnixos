@@ -1,4 +1,4 @@
-{ ... }: {
+{
   flake.nixosModules.hpPavilionConfiguration = { pkgs, ... }: {
     users.users.quest = {
       isNormalUser = true;

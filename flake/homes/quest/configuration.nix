@@ -9,17 +9,21 @@
     imports = [
       self.homeModules.common
 
+      # development
+      self.homeModules.git
       self.homeModules.helix
-      # self.homeModules.zellij
+      self.homeModules.kakoune
+      self.homeModules.vscode
+
+      # productivity / misc
+      self.homeModules.libre-office
+      self.homeModules.anki
+
+      # games
       self.homeModules.discord
       self.homeModules.prism-launcher
       self.homeModules.osu-lazer
-      self.homeModules.libre-office
-      self.homeModules.vscode
-      self.homeModules.git
-      self.homeModules.anki
       self.homeModules.itch
-      self.homeModules.kakoune
     ];
   };
 }
