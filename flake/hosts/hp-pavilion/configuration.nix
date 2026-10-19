@@ -10,6 +10,8 @@
       VISUAL = "hx";
     };
 
+    services.displayManager.defaultSession = null;
+
     imports = [
       self.nixosModules.common
       self.nixosModules.locale
