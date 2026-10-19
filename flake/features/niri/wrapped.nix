@@ -44,6 +44,10 @@
             binds = { };
           };
 
+          gestures = {
+            hot-corners.off = _: { };
+          };
+
           binds = {
             "Mod+Shift+Slash".show-hotkey-overlay = _: { };
             "Mod+Escape" = _: {
